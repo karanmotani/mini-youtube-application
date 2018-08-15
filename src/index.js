@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import SearchBar from './components/search_bar';
+
+const API_KEY = 'AIzaSyBcbOoWubrTlW7Qy68NbbJ_urL2G77EWjI';
+
 // Create a new component. This component should produce some HTML
 
 // When we create a component, we are creating a class of the component (a type)
@@ -8,7 +12,11 @@ import ReactDOM from 'react-dom';
 // Here, App is a class, not an instance
 
 const App = () => {
-  return <div>Hi!</div>;
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  );
 }
 
 // Take this component's generated HTML and put it on the page (in the DOM)
