@@ -23,14 +23,14 @@ import React, { Component } from 'react';
        <div className="search-bar">
           <input
             value={this.state.term}
-            onChange={event => this.setState({ term: event.target.value })} />
+            onChange={event => this.onInputChange(event.target.value)} />
        </div>
      );
    }
 
-   onInputChange(event) {
-     console.log(event.target.value);
-     this.setState({ term: event.target.value });
+   onInputChange(term) {
+     this.setState({ term });               // Set the state to the search term
+     this.props.onSearchTermChange(term);   // Fire off the callback from parent
    }
  }
 

@@ -8,9 +8,9 @@ const VideoList = (props) => {
   const VideoItems = props.videos.map((video) => {
     return (
       <VideoListItem
-        onVideoSelect={props.onVideoSelect}
-        key={video.etag}
-        video={video} />
+        onVideoSelect={props.onVideoSelect} // Fire off the callback from parent
+        key={video.etag}                    // Unique ID for each element
+        video={video} />                    // Pass to the video to child
     );
   });
 

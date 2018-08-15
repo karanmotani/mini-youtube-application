@@ -12,6 +12,8 @@ const VideoListItem = ({video, onVideoSelect}) => {
 
   return (
     <li onClick={() => onVideoSelect(video)} className="list-group-item">
+    // onVideoSelect is the callback from parent VideoList fired, thus returning
+    // the selectedVideo back to the parent component
       <div className="video-list-media">
 
         <div className="media-left">
