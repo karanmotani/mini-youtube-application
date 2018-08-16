@@ -10,10 +10,10 @@ const VideoListItem = ({video, onVideoSelect}) => {
   const image = video.snippet.thumbnails.default;
   const title = video.snippet.title;
 
+  // onVideoSelect is the callback from parent VideoList fired, thus returning
+  // the selectedVideo back to the parent component
   return (
     <li onClick={() => onVideoSelect(video)} className="list-group-item">
-    // onVideoSelect is the callback from parent VideoList fired, thus returning
-    // the selectedVideo back to the parent component
       <div className="video-list-media">
 
         <div className="media-left">
